@@ -1,5 +1,5 @@
 const { sources } = require("./assets/sources");
-const { copyFile, createDir } = require("./util");
+const { copyFile, createDir, isFileExists } = require("./util");
 
 const path = require("path");
 
@@ -17,9 +17,12 @@ async function skeleton(basepath) {
                     await createDir(path.resolve(basepath, parentDir));
                 }
 
-                await copyFile(srcPath, destPath);
-
-                console.log(`Created ${p}`);
+                if(!isFileExists(destPath)) {
+                    await copyFile(srcPath, destPath);
+                    console.log(`Created ${p}`);
+                } else {
+                    console.log(`Skipped ${p}`);
+                }
             }
         } catch (err) {
             console.error(err);

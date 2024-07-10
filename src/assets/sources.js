@@ -29,6 +29,11 @@ const sources = [
         type: "file",
         path: "./.gitignore",
         src: "src/assets/.gitignore"
+    },
+    {
+        type: "file",
+        path: "./package.json",
+        src: "src/assets/_package.json"
     }
 ];
 

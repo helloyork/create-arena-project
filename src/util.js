@@ -17,6 +17,15 @@ function createFile(filePath) {
     return writeFile(filePath, "");
 }
 
+function isFileExists(filePath) {
+    try {
+        fs.access(filePath);
+        return true;
+    } catch (err) {
+        return false;
+    }
+}
+
 function copyFile(src, dest) {
     return fs.copyFile(src, dest);
 }
@@ -27,4 +36,5 @@ module.exports = {
     createDir,
     createFile,
     copyFile,
+    isFileExists,
 };
