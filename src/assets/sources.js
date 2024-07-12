@@ -7,12 +7,12 @@ const sources = [
     },
     {
         type: "file",
-        path: "./server/index.ts",
+        path: "./server/App.ts",
         src: "src/assets/index.ts"
     },
     {
         type: "file",
-        path: "./client/clientIndex.ts",
+        path: "./client/clientApp.ts",
         src: "src/assets/clientIndex.ts"
     },
     {

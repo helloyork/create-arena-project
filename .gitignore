@@ -1,6 +1,7 @@
 out
 dist
 cache
+test
 node_modules
 .vscode-test/
 *.vsix

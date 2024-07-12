@@ -1,14 +1,21 @@
 {
   "name": "create-arena-project",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "description": "Create a Arena Project",
   "main": "./src/index.js",
+  "keywords": [
+    "Arena",
+    "box3",
+    "dao3",
+    "box3lab",
+    "神奇代码岛"
+  ],
   "bin": {
     "create-arena-project": "./src/index.js"
   },
   "scripts": {
     "start": "node ./src/index.js"
   },
-  "author": "helloyork@icloud.com",
+  "author": "box3lab",
   "license": "MIT"
 }
