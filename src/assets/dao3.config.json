@@ -4,8 +4,7 @@
             "typescript": {
                 "temp": "./temp",
                 "server": "./server",
-                "client": "./client",
-                "strict": true
+                "client": "./client"
             },
             "userAgent": ""
         },

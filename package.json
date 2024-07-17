@@ -1,6 +1,6 @@
 {
   "name": "create-arena-project",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Create a Arena Project",
   "main": "./src/index.js",
   "keywords": [
