@@ -1,6 +1,6 @@
 {
   "name": "create-arena-project",
-  "version": "0.1.6",
+  "version": "0.2.2",
   "description": "Create a Arena Project",
   "main": "./src/index.js",
   "keywords": [
@@ -11,7 +11,7 @@
     "神奇代码岛"
   ],
   "bin": {
-    "create-arena-project": "./src/index.js"
+    "create-arena-project": "src/index.js"
   },
   "scripts": {
     "start": "node ./src/index.js"
