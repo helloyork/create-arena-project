@@ -55,7 +55,7 @@ const sources = [
     {
         type: "file",
         path: "./.gitignore",
-        src: "src/assets/.gitignore"
+        src: "src/assets/gitignore_"
     },
     {
         type: "file",
