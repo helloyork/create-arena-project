@@ -3,8 +3,12 @@
         "file": {
             "typescript": {
                 "temp": "./temp",
-                "server": "./server",
-                "client": "./client"
+                "server": {
+                    "base": "./server"
+                },
+                "client": {
+                    "base": "./client"
+                }
             },
             "userAgent": ""
         },

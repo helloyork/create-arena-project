@@ -1,4 +1,23 @@
 
+/*
+myArenaProject
+├── dao3.config.json
+├── package.json
+├── .gitignore
+├── /server/
+│   ├── App.ts
+|   ├── tsconfig.json
+|   ├── /src/
+│   └── /types/
+│       └── GameAPI.d.ts
+└── /client/
+    ├── clientApp.ts
+    ├── tsconfig.json
+    ├── /src/
+    └── /types/
+        └── ClientAPI.d.ts
+*/
+
 const sources = [
     {
         type: "file",
@@ -17,12 +36,12 @@ const sources = [
     },
     {
         type: "file",
-        path: "./server/GameAPI.d.ts",
+        path: "./server/types/GameAPI.d.ts",
         src: "src/assets/GameAPI.d.ts"
     },
     {
         type: "file",
-        path: "./client/ClientAPI.d.ts",
+        path: "./client/types/ClientAPI.d.ts",
         src: "src/assets/ClientAPI.d.ts"
     },
     {
@@ -34,6 +53,24 @@ const sources = [
         type: "file",
         path: "./package.json",
         src: "src/assets/_package.json"
+    },
+    {
+        type: "file",
+        path: "./server/tsconfig.json",
+        src: "src/assets/tsconfig-client.json"
+    },
+    {
+        type: "file",
+        path: "./client/tsconfig.json",
+        src: "src/assets/tsconfig-server.json"
+    },
+    {
+        type: "dir",
+        path: "./server/src",
+    },
+    {
+        type: "dir",
+        path: "./client/src",
     }
 ];
 

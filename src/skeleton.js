@@ -20,6 +20,11 @@ async function skeleton(basepath) {
                 await copyFile(srcPath, destPath);
 
                 console.log(`Created ${p}`);
+            } else if (type === "dir") {
+                const destPath = path.resolve(basepath, p);
+                await createDir(destPath);
+
+                console.log(`Created dir ${p}`);
             }
         } catch (err) {
             console.error(err);
