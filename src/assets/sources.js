@@ -51,11 +51,6 @@ const sources = [
     },
     {
         type: "file",
-        path: "./package.json",
-        src: "src/assets/_package.json"
-    },
-    {
-        type: "file",
         path: "./server/tsconfig.json",
         src: "src/assets/tsconfig-client.json"
     },
