@@ -1,5 +1,16 @@
 // @ts-nocheck
 
+declare type GameLoggerMethod = (...args: any[]) => void;
+
+declare const console: {
+  assert: (assertion, ...args: any[]) => void;
+  log: GameLoggerMethod;
+  debug: GameLoggerMethod;
+  error: GameLoggerMethod;
+  warn: GameLoggerMethod;
+  clear: GameLoggerMethod;
+};
+
 /**
  * 事件处理模块
  */
@@ -85,9 +96,16 @@ declare class Vec3 {
 interface UiEvent {
     target: UiNode;
 }
+interface UiInputEvent {
+    target: UiInput;
+}
 declare type UiNodeEvents = {
     pointerdown: UiEvent;
     pointerup: UiEvent;
+};
+declare type UiInputEvents = UiNodeEvents & {
+    focus: UiInputEvent;
+    blur: UiInputEvent;
 };
 /**
  * 基础节点
@@ -131,7 +149,18 @@ declare class UiText extends UiRenderable {
     readonly textColor: Vec3;
     textXAlignment: 'Center' | 'Left' | 'Right';
     textYAlignment: 'Center' | 'Top' | 'Bottom';
+    autoWordWrap: boolean;
+    textLineHeight: number;
     static create(): UiText;
+}
+declare class UiInput extends UiText {
+    placeholder: string;
+    readonly placeholderColor: Vec3;
+    readonly placeholderOpacity: number;
+    readonly isFocus: boolean;
+    readonly focus: () => void;
+    readonly blur: () => string;
+    static create(): UiInput;
 }
 declare class UiImage extends UiRenderable {
     image: string;
@@ -172,7 +201,7 @@ declare const screenWidth: number;
 /**
  * 游戏屏幕的高度，取决于玩家进入游戏时的屏幕大小。
  */
-declare const screenHight: number;
+declare const screenHeight: number;
 
 /**
  * 指针锁定状态变化事件。
@@ -267,3 +296,4 @@ declare function clearInterval(id: number): void;
  * 全局监听玩家的输入。
  */
 declare const input: InputSystem;
+

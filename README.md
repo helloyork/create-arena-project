@@ -35,17 +35,16 @@ Amc
 myArenaProject
 ├── dao3.config.json
 ├── package.json
-├── .gitignore
 ├── /server/
-│   ├── App.ts
 |   ├── tsconfig.json
 |   ├── /src/
+|   |   └── App.ts
 │   └── /types/
 │       └── GameAPI.d.ts
 └── /client/
-    ├── clientApp.ts
     ├── tsconfig.json
     ├── /src/
+    |   └── clientApp.ts
     └── /types/
         └── ClientAPI.d.ts
 ```

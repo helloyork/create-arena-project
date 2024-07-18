@@ -2,12 +2,13 @@
     "ArenaPro": {
         "file": {
             "typescript": {
-                "temp": "./temp",
                 "server": {
-                    "base": "./server"
+                    "base": "./server",
+                    "development": false
                 },
                 "client": {
-                    "base": "./client"
+                    "base": "./client",
+                    "development": false
                 }
             },
             "userAgent": ""

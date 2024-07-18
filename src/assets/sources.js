@@ -25,13 +25,21 @@ const sources = [
         src: "src/assets/dao3.config.json"
     },
     {
+        type: "dir",
+        path: "./server/src",
+    },
+    {
+        type: "dir",
+        path: "./client/src",
+    },
+    {
         type: "file",
-        path: "./server/App.ts",
+        path: "./server/src/App.ts",
         src: "src/assets/index.ts"
     },
     {
         type: "file",
-        path: "./client/clientApp.ts",
+        path: "./client/src/clientApp.ts",
         src: "src/assets/clientIndex.ts"
     },
     {
@@ -51,21 +59,13 @@ const sources = [
     },
     {
         type: "file",
-        path: "./server/tsconfig.json",
+        path: "./client/tsconfig.json",
         src: "src/assets/tsconfig-client.json"
     },
     {
         type: "file",
-        path: "./client/tsconfig.json",
+        path: "./server/tsconfig.json",
         src: "src/assets/tsconfig-server.json"
-    },
-    {
-        type: "dir",
-        path: "./server/src",
-    },
-    {
-        type: "dir",
-        path: "./client/src",
     }
 ];
 
